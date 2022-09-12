@@ -1,8 +1,8 @@
 import styles from './HeaderCartButton.module.css';
 import CartIcon from "../../assets/004 CartIcon";
 
-const HeaderCartButton = () => {
-    return <button className={styles.button}>
+const HeaderCartButton = (props) => {
+    return <button className={styles.button} onClick={props.onShowCart}>
         <span className={styles.icon}>
             <CartIcon />
         </span>
@@ -10,4 +10,5 @@ const HeaderCartButton = () => {
         <span className={styles.badge}>2</span>
     </button>
 }
+
 export default HeaderCartButton;
